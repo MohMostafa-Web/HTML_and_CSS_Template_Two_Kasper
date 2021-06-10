@@ -1,0 +1,221 @@
+#01 - Discover Design, Create Project, Add Tools
+
+  [1] Open Design Template as Picture or PSD
+
+  [2] Create Files and Floders
+      - index.html
+      - css/
+        -- style.css
+        -- normalize.css
+        -- all.min.css // Fontawsome Library
+      - images/ 
+        -- All used images
+
+  [3] Create a Container inside the main Div to center Content Horizontally
+        Ex: HTML
+          <div class="parent">
+            <div class="container"> // has width, margin, padding
+              Text
+            </div>
+          </div>
+
+  [4] Add MediaQueries to make the design responsive for Small, Medium, Large
+        Ex: CSS
+          .container {
+            background-color: #eee;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+          /* Small */ 
+          @media (min-width: 768px) {
+            .container {
+              width: 750px;
+            }
+          }
+          /* Medium */ 
+          @media (min-width: 992px) {
+            .container {
+              width: 970px;
+            }
+          }
+          /* Large */ 
+          @media (min-width: 1200px) {
+            .container {
+              width: 1170px;
+            }
+          }
+
+
+#02 - Create Header And Links Part 1
+
+    > using flex to distribute header logo image and nav
+
+    > to resizing image, you can put value for only one dimension Whatever width or height 
+
+
+#03 - Create Header And Links Part 2
+
+    > using flex to distribute nav Elements  ul, form icon  
+
+    > using flex to make ul li Elements row
+
+
+#04 - Create Header Part 3 Responsive
+
+    > Hide/Show navbar Links when the Screen is small/Large
+
+    > In the small screen, hide navbar links, then create button to show menu of these links
+
+    > make header absolute to make Landing Section background-image 100vw, 100vh
+
+
+#05 - Create Landing Section Part 1
+    > make background-image 100vh
+
+    > make an overlay width, height 100% with background-color: rgba(0 0 0 / 60%);
+
+    > using position, translateY to make text centered vertically
+
+    > using flex to distribute Content of text
+
+
+#06 - Create Landing Section Part 2
+
+    > add icons angle-left angle-right (position, translateY)
+
+    > add bullets ul li, style it (position, translateX)
+
+
+#07 - Heading Component
+
+    > create class "main-heading" contains h2, p
+
+    > give a special style for h2 using ::before, ::after
+
+
+#08 - Services Section
+
+    > using grid to distribute services-container 
+    
+    > using flex to distrbute serv Elements i, text
+
+
+#09 - Design Section
+    > using flex to distribute Elements image, info
+    
+    > we make overlay over background-image
+      [1] by adding overlay div over background-image
+      [2] or by using pseudo element ::before or ::after
+
+    > you can add Icon as pseudo element ::before or ::after
+        content: '\f108'; // code of Icon
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+
+
+#10 - Portfolio Section
+    > using flex to distribute Shuffle Elements li
+
+    > using grid to distribute gallery Elements image
+
+    > make caption for Image using position and transition
+
+    > make trasition, transform for img Element
+
+
+#11 - Video Section
+    > using pseudo element ::before or ::after to make overlay for section
+
+    > video tag must contain attributes: autoplay loop muted
+
+    > using position to center text div
+
+
+#12 - About Section
+    > using position relative, bottom, margin-top to reposition img
+    
+    > We added overflow hidden to about section
+
+
+#13 - Statistics Section
+    > using pseudo element ::before or ::after to make overlay for section
+
+    > using flex to distribute ul Elements li, flex-basis for li
+
+
+#14 - Our Skills Section - Html
+#15 - Our Skills Testimonials
+#16 - Our Skills - Progress Part
+    > we created progress in HTMl as below and we put width inline style to access it from database or server, 
+      we created attribute data-progress to get it for CSS attr()
+        <div class="prog">
+          <span style="width:95%;" data-progress="95%"></span>
+        </div>
+
+    > using Grid to distribute .testimonials-skills .container
+    
+    > using Flex to distribute .testimonials .testi
+    
+    > using ::before, ::after to create a tooltip for .prog span
+    
+    
+#17 - Quote Section
+    > using pseudo element ::before or ::after to make overlay for section
+    
+    > changing character quotes for q Element by using fontawesome icon
+        for Ex: .quote q::before {
+                  content: '\f10d';
+                  font-family: 'Font Awesome 5 Free';
+                  font-weight: 900;
+                  font-size: 8px;
+                  position: relative;
+                  top: -15px;
+                  left: -3px;
+                }
+                
+
+#18#19 - Pricing Section - Part 1, Part 2
+    > using flex to distribute .pricing-content Elements div.plan
+
+    > using Pseudo Elements ::before to make '$', '/Mo'
+      - you can use classes for diffent cuuencies such .dollar, .dollar::before, .dollar::after
+        or .euro, .euro::before, .euro::after
+
+
+#20 - Subscribe Section
+    > using pseudo element ::before for .subscribe to make overlay 
+
+    > using flex to distribute .subscribe .container Elements (form, p)
+    
+    > using flex to distribute form Elements inputs
+
+
+#21 - Contact Us Section
+    > using flex to distribute .contact-content Elements (form, .info)
+
+
+#22 - Footer
+    > Make its padding as 
+        padding-top: calc(var(--section-padding) / 2);
+        padding-bottom: calc(var(--section-padding) / 2);
+
+    > using pseudo element ::before for .footer to make overlay
+
+
+#23 - The End And Advices
+    > We used a Free PSD to make it (Check Licence of PSD)
+
+    > Make it your work
+
+    > Always Care and Update your Code
+
+    > Upload your Work to Github
+
+
+Note: 
+> if using flex with Sensitive Content to changing width in MediaQueries, use flex (flex-basis, flex-grow, flex-shrink), margin
+
+
+
+
+
